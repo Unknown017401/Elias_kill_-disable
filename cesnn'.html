@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Désactivation de Elias</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/originals/7a/9a/3d/7a9a3d5fb82484cb205d4e11ce45717c.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0 0 5px black;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    width: 450px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d33;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #a00;
+  }
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <h1>désactivation de elias</h1>
+  <div>
+    <input id="codeInput" type="text" placeholder="Entrez le code ici" />
+    <button onclick="desactiverElias()">Désactiver</button>
+  </div>
+  <div id="result"></div>
+
+<script>
+  const CODE_SECRET = "KeyID: 017–[sub.level:intrusion]–awaiting handshake...";
+
+  function desactiverElias() {
+    const input = document.getElementById('codeInput').value.trim();
+    const result = document.getElementById('result');
+    if(input === CODE_SECRET) {
+      result.style.color = "#0f0";
+      result.textContent = "Elias désactivé... redirection en cours...";
+      setTimeout(() => {
+        window.location.href = "https://youtu.be/7U--BkKyiAo";
+      }, 2000); // délai de 2 secondes avant la redirection
+    } else {
+      result.style.color = "#f00";
+      result.textContent = "Code incorrect, réessaye.";
+    }
+  }
+</script>
+</body>
+</html>
